@@ -1,14 +1,11 @@
 <h2>My Heroes</h2>
 <ul class="heroes">
-  <li 
-    *ngFor="let hero of heroes" 
-    (click)='onSelect(hero)' 
-    [class.selected]="hero === selectedHero">
+  <li *ngFor="let hero of heroes" (click)='onSelect(hero)' [class.selected]="hero === selectedHero">
     <span class="badge">{{hero.id}}</span>
     {{hero.name}}
   </li>
 </ul>
-<div *ngIf='selectedHero '>
+<div *ngIf='selectedHero'>
   <h2>{{selectedHero.name | uppercase}} Details</h2>
   <div><span>id: </span>{{selectedHero.id}}</div>
   <div>
@@ -17,3 +14,5 @@
     </label>
   </div>
 </div>
+
+<h3>加油你是最棒的，爱你呦</h3>
